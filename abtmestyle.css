@@ -31,3 +31,8 @@ h3{
 #valid{
  top: 50px;
 }
+  .column{
+   height: 150px;
+   width: 40%;
+   display: inline;
+  }
