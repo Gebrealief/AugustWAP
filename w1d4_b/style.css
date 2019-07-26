@@ -1,0 +1,44 @@
+#header{
+    background-color: lightblue;
+    height: 100px;
+    text-align: center;
+    padding-top: 20px;
+}
+h1{
+    margin: 30px;
+}
+.input-group input{
+   border-radius: 3px;
+   box-shadow: none;
+   border: 1px solid gray;
+   
+}
+#content{
+    padding: 30px
+}
+label{
+    display: block;
+}
+button{
+    background-color: lightblue;
+}
+.input-group{
+    padding: 5px;
+}
+th{
+    background-color: lightblue;
+}
+td,th{
+    border: 1px solid #ddd;
+    
+}
+table{
+    border-collapse: collapse;
+    width: 1200px;
+}
+#footer{
+    background-color: lightblue;
+    height: 60px;
+    text-align: center;
+    padding-top: 20px;
+}
