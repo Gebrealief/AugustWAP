@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!-- saved from url=(0113)https://online.cs.mum.edu/access/content/group/ffd9284a-f5e9-49ef-9b05-fe243fd21411/lab%20helpers/JSintroLab.html -->
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>Title</title>
+  <script>
+
+    /* runs test to see if expected argument is === to value returned by function2test argument */
+    function myFunctionTest(expected, found) {
+      if (expected === found) {
+        return "TEST SUCCEEDED";
+      } else {
+        return "TEST FAILED.  Expected " + expected + " found " + found;
+      }
+    }
+
+    /* max returns the maximum of 2 arguments */
+    function max(a, b) {
+      if (a > b) {
+        return a;
+      } else {
+        return b;
+      };
+    }
+    console.log("Expected output of max(20,10) is 20  " + myFunctionTest(20, max(20, 10)));
+
+    /* max3 takes 3 numbers as arguments and returns the largest */
+    function maxOfThree(a, b, c) {
+      return max(max(a, b), c);
+
+    }
+
+    console.log("Expected output of maxOfThree(5,4,44) is 44  " + myFunctionTest(44, maxOfThree(5, 4, 44)));
+    console.log("Expected output of maxOfThree(55,4,44) is 55  " + myFunctionTest(55, maxOfThree(55, 4, 44)));
+
+    console.log("Expected output of maxOfThree(55,4,44) is 55  " + myFunctionTest(4, maxOfThree(55, 4, 44)));
+    function isVowl(x) {
+      var vowl = ["A", "E", "I", "O", "U"];
+      for (var i = 0; i < vowl.length; i++) {
+        if (x.toUpperCase() === vowl[i])
+          return true;
+      }
+      return false;
+    };
+    console.log("expected out put of isVowl('s') is False   " + myFunctionTest(false, isVowl("s")));
+    function sum(y) {
+      var sum = 0;
+      for (var i = 0; i < y.length; i++) {
+        sum = y[i] + sum;
+      }
+      return sum;
+    };
+    function multiply(z) {
+      var multiply = 1;
+      for (var i = 0; i < z.length; i++) {
+        multiply = z[i] * multiply;
+      }
+      return multiply;
+    };
+    console.log("expected out put of sum([1,2,3,4]) is 10   " + myFunctionTest(10, sum([1, 2, 3, 4])));
+    console.log("expected out put of multiply([1,2,3,4]) is 24   " + myFunctionTest(24, multiply([1, 2, 3, 4])));
+    function reverse(word) {
+      var splitString = word.split("");
+      var reverseArray = splitString.reverse();
+      var joinArray = reverseArray.join("");
+      return joinArray;
+
+    };
+    console.log("expected out put of reverse(jag testar) is ratset gaj  " + myFunctionTest('ratset gaj', reverse('jag testar')));
+    function findLongestWord(testword) {
+      var longest = testword.sort(function (a, b) {
+        return b.length - a.length;
+      })[0];
+      return longest;
+    };
+    console.log("expected out put of findLongestWord(['hi','hello']) is 'hello'  " + myFunctionTest('hello', findLongestWord(['hi', 'hello'])));
+    function filterLongWords(words, length) {
+      return words.filter(function (word) {
+        return word.length > length ;
+      });
+
+    };
+    console.log("expected out put of filterLongWords(['hi' , 'hello'], 3) is ['hello']  " + myFunctionTest(['hello'], filterLongWords(['hi', 'hello'], 3)));
+  </script>
+</head>
+
+<body cz-shortcut-listen="true">
+
+  Look in the Chrome developer console to see the output. CTRL_SHIFT_J
+
+
+</body>
+
+</html>
