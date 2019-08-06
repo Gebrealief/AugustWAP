@@ -1,9 +1,24 @@
 
-    #circle {
+ 
+    .circle {
         background: #f00;
         width: 50px;
         height: 50px;
         border-radius: 50%;
         margin: auto;
       
+    }
+    #inparea{
+        margin: auto;
+    }
+    .input-group{
+        margin-bottom: 10px;
+    }
+    label{
+        width: 110px;
+        display: inline-block;
+    }
+    #container{
+        width:600px;
+        height: 400px;
     }
