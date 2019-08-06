@@ -45,23 +45,42 @@
       }
       return false;
     };
-    console.log("expected out put of isVowl('s') is False   " + myFunctionTest(false, isVowl("s")));
+   /* console.log("expected out put of isVowl('s') is False   " + myFunctionTest(false, isVowl("s")));
     function sum(y) {
       var sum = 0;
       for (var i = 0; i < y.length; i++) {
         sum = y[i] + sum;
       }
       return sum;
+    };*/
+    /*updating sum using reduce*/
+    console.log("expected out put of isVowl('s') is False   " + myFunctionTest(false, isVowl("s")));
+    function sum(y) {
+      var sum = 0;
+      sum=y.reduce(function(preValue,curValue,CurIndex,arry){
+           return preValue+curValue;
+     });
+      return sum;
     };
+    console.log("expected out put of sum([1,2,3,4]) is 10   " + myFunctionTest(10, sum([1, 2, 3, 4])));
+    /* 
     function multiply(z) {
       var multiply = 1;
       for (var i = 0; i < z.length; i++) {
         multiply = z[i] * multiply;
       }
       return multiply;
-    };
-    console.log("expected out put of sum([1,2,3,4]) is 10   " + myFunctionTest(10, sum([1, 2, 3, 4])));
+    };*/
+  
+    function multiply(z) {
+      var multiply = 1;
+      multiply=z.reduce(function(preValue,curValue,curIndex,arry){
+       return preValue*curValue;
+      });
+      return multiply;
+    };     
     console.log("expected out put of multiply([1,2,3,4]) is 24   " + myFunctionTest(24, multiply([1, 2, 3, 4])));
+
     function reverse(word) {
       var splitString = word.split("");
       var reverseArray = splitString.reverse();
@@ -84,6 +103,22 @@
 
     };
     console.log("expected out put of filterLongWords(['hi' , 'hello'], 3) is ['hello']  " + myFunctionTest(['hello'], filterLongWords(['hi', 'hello'], 3)));
+    /* jsfiddle answers 
+    1.multiply each element by 3
+    (5) [3, 9, 15, 9, 9]
+(index):39 (2) [1, 5]
+(index):43 15
+(index):47 3
+(index):48 1
+
+  2.array with all elements three
+  (5) [3, 9, 15, 9, 9]
+(index):39 (3) [3, 3, 3]
+(index):43 15
+(index):47 3
+(index):48 1
+
+*/
   </script>
 </head>
 
